@@ -1,0 +1,13 @@
+<div class="split-lists">
+
+  {{ range $key, $value := .Site.Params.nav }}
+    {{ range $key, $page := $value }}
+
+      <div class="split-nav">
+         <h3><a href="{{ $page.url }}">{{ $page.heading }}</a></h3>
+      </div>
+
+    {{ end }}
+  {{ end }}
+
+</div>

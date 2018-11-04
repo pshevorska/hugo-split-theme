@@ -32,6 +32,8 @@
         <!-- Main -->
         {{ block "main" .  }}
           <!-- Bio -->
+          {{ partial "nav" . }}
+          <!-- Bio -->
           {{ partial "bio" . }}
         {{ end }}
 
