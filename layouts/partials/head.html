@@ -8,8 +8,11 @@
 <meta name="robots" content="index, follow" />
 <meta name="referrer" content="always" />
 
+<!-- Google Webmaster Tools -->
+{{ with .Site.Params.googleVerify }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
+
 <!-- Social & Open Graph -->
-<meta property="og:title" content="{{ if .IsPage }}{{ .Title }} - {{ end }}{{ .Site.Title }}" />
+<meta property="og:title" content="{{ .Site.Title }}" />
 {{ with .Site.Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
 <meta property="og:url" content="{{ .Site.BaseURL }}" />
 {{ with .Site.Params.shareImage }}
