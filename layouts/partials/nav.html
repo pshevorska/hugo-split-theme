@@ -4,7 +4,11 @@
     {{ range $key, $page := $value }}
 
       <div class="split-nav">
-         <h3><a href="{{ $page.url }}">{{ $page.heading }}</a></h3>
+        {{ if $page.newtab }}
+            <h3><a href="{{ $page.url }}" target="_blank">{{ $page.heading }}</a></h3>
+        {{ else }}
+            <h3><a href="{{ $page.url }}">{{ $page.heading }}</a></h3>
+        {{ end }}
       </div>
 
     {{ end }}
